@@ -4,41 +4,79 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>html form</title>        
-
+    <title>html form</title>     
+    <link rel="stylesheet" href="css/contact_us.css"> 
+    
+    <style>
+        div{color: black !importantS;}
+        label{
+            background-color: blue;
+            font-size: 50;
+        }
+    </style>
 </head>
-<body>
-    <h1>system login</h1>
-    <form method="get" action="https://book.niceinfos.com/frontend/assets/html_file_upload/response.php">
 
-        <div>
-            <input type="text" name="acc">
-        </div>
-        <div>
-            <input type="password" name="pwd">
-        </div>
-        <div>
-            <input type="number" name="valid">
-        </div>
-        <div>
-            <input type="tel" name="phone">
-        </div>
-        <div>
-            <input type="color" name="bg_color">
-        </div>
-        <div>
-            <input type="date" name="schedule_date">
-        </div>
-        <div>
-            <input type="time" name="schedule_time">
-        </div>
-        <div>
-            <input type="file" name="my_pic">
-        </div>
-        <div>
-            <input type="submit">
-        </div>
-        <button>login</button>
+
+<body>
+    <body>
+        <form method="post" action="https://book.niceinfos.com/frontend/assets/html_contact_form/api.php">
+            <div>
+                <div>
+                    <label for="fullname">全名</label>
+                    <label for="fullname">全名</label>
+                </div>
+                <div>
+                    <input type="text" name="fullname" id="fullname">
+                </div>
+            </div>
+            <div>
+                <div>
+                    <label for="gender">性別</label>
+                </div>
+                <div>
+                    <input type="radio" name="gender" id="gender-m">
+                    <label for="gender-m">男</label>
+                    <input type="radio" name="gender" id="gender-f">
+                    <label for="gender-f">女</label>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <label for="">喜好音樂</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="music[]" id="music-pop">
+                    <label for="music-pop">Pop</label>
+                    <input type="checkbox" name="music[]" id="music-jazz">
+                    <label for="music-jazz">Jazz</label>
+                    <input type="checkbox" name="music[]" id="music-rock">
+                    <label for="music-rock">Rock</label>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <label for="city">縣市</label>
+                </div>
+                <div>
+                    <select name="city" id="city">
+                        <option value="">選擇縣市</option>
+                        <option>台北</option>
+                        <option>台中</option>
+                        <option>高雄</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <label for="remark">其他建議</label>
+                </div>
+                <div>
+                    <textarea name="remark" id="remark" cols="30" rows="10"></textarea>
+                </div>
+            </div>
+            <div>
+                <button>提交</button>
+            </div>
     </form>
     <form method=post action="">
         <button> testfail</button>
