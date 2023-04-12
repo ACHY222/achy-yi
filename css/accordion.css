@@ -43,3 +43,23 @@ ul{
     padding: 15px;
     display: none;
 }
+
+.accordion-switch:checked+ .accordion-title .accordion-icon-open{
+    display: none;
+}
+
+.accordion-switch:checked+ .accordion-title .accordion-icon-close{
+    display: block;
+}
+
+.accordion-switch:checked~.accordion-contnet{
+    display: block;
+}
+
+.accordion-icon-close{
+    display: none;
+}
+
+.accordion-switch{
+    display: none;
+}
