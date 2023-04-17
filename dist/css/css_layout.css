@@ -4,3 +4,26 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body{
+    background: rgb(19, 18, 18);
+}
+.container{
+    max-width: 700px;
+    height: auto;
+    position: relative;
+    margin: auto;
+
+}
+
+.header{
+    background: white;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 10px;
+    height: 100px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+}
