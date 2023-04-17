@@ -8,9 +8,10 @@
 body{
     background: rgb(19, 18, 18);
 }
+
 .container{
     max-width: 700px;
-    height: auto;
+    height: 100%;
     position: relative;
     margin: auto;
 
@@ -49,4 +50,20 @@ body{
     font-size: 14px;
     font-weight: 800;
     font-family: 'Courier New', Courier, monospace;
+}
+
+.footer{
+    background: #fff;
+    height: 100px;
+
+}
+
+.footer-content{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+}
+.wrap{
+    height: 100vh;
 }
