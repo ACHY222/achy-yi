@@ -187,4 +187,38 @@ html {
   top: 0;
   left: 0;
   background: rgba(0, 0, 0, 0.356);
+}
+
+.flow {
+  position: relative;
+  z-index: 2;
+}
+.flow .item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.flow .item::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 0;
+  top: 0;
+  border-left: 4px dashed #fff;
+}
+.flow .item .circle {
+  width: 30px;
+  height: 30px;
+  background: red;
+  border-radius: 30px;
+  position: relative;
+  z-index: 2;
+}
+.flow .item .text {
+  position: absolute;
+  left: calc(50% + 50px);
+  background: rgb(0, 60, 255);
+  padding: 20px;
 }/*# sourceMappingURL=css_layout.css.map */
