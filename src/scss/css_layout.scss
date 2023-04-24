@@ -18,7 +18,7 @@ html {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 2;
+    z-index: 99;
     width: 100%;
 
     .header-content {
@@ -196,13 +196,13 @@ html {
 
 
 .courses {
-    height: 100vh;
+    min-height: 100vh;
     background-color: rgb(65, 65, 65);
     background-image: url(../images/process.jpeg);
     background-size: cover;
     position: relative;
     color: #fff;
-    padding-top: 120px;
+    padding-bottom: 120px;
 
     &::before {
         content: "";
@@ -251,6 +251,20 @@ html {
             left: calc(50% + 50px);
             background: rgb(0, 60, 255);
             padding: 20px;
+            border-radius: 6px;
+
+            h4 {
+                margin-bottom: 15px;
+            }
+        }
+
+        &:nth-child(even) {
+            .text {
+                left: unset;
+                right: calc(50% + 50px);
+
+                text-align: right;
+            }
         }
     }
 
