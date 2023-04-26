@@ -1,0 +1,39 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 500px;
+  height: 100%;
+  position: relative;
+  margin: auto;
+}
+
+.rotate {
+  transform: rotate(50deg);
+  display: inline-flex;
+  width: 100px;
+  height: 100px;
+  margin-top: 50px;
+  background-color: red;
+  color: black;
+}
+
+.sp {
+  transform: rotate(45deg);
+  width: 100px;
+  height: 100px;
+  margin-top: 50px;
+  background-color: red;
+  color: black;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.sp > span {
+  transform: rotate(135deg);
+}/*# sourceMappingURL=rotate.css.map */
