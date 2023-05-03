@@ -8,7 +8,7 @@
 
 body,
 html {
-  background: #000;
+  background: #fff;
   scroll-behavior: smooth;
 }
 
@@ -37,6 +37,9 @@ html {
   height: 100px;
   border-bottom-right-radius: 8px;
   border-bottom-left-radius: 8px;
+}
+.header .header-content #mobile-switch-box {
+  display: none;
 }
 .header .header-content .menu ul {
   list-style-type: none;
@@ -263,5 +266,24 @@ html {
   }
   .header .header-content .mobile-switch {
     display: flex;
+  }
+  .header .header-content #mobile-switch-box:checked ~ .menu {
+    display: block;
+  }
+  .header .header-content #mobile-switch-box:checked ~ .menu-switch > span {
+    background: #red;
+  }
+  .header .header-content #mobile-switch-box:checked ~ .menu-switch > span:first-child {
+    position: relative;
+    transform: rotate(45deg);
+    top: 5px;
+  }
+  .header .header-content #mobile-switch-box:checked ~ .menu-switch > span :nth-child(2) {
+    display: none;
+  }
+  .header .header-content #mobile-switch-box:checked ~ .menu-switch > span:last-child {
+    position: relative;
+    transform: rotate(-45deg);
+    top: -5px;
   }
 }/*# sourceMappingURL=RWD_layout.css.map */
