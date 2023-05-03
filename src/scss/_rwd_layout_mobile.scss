@@ -4,11 +4,34 @@
 
 
         .header-content {
+            position: relative;
 
             .menu {
-                display: none;
+                // display: none;
+                position: absolute;
+                background: #fff;
+                top: -500px;
+                width: 100%;
+                left: 0;
+                opacity: 0;
+                border-bottom-left-radius: 8px;
+                border-bottom-right-radius: 8px;
+                padding-top: 30px;
+                padding-bottom: 30px;
+                transition: 0.3s;
 
+                ul {
+                    flex-direction: column;
 
+                    li {
+                        margin-right: 0;
+                        margin-bottom: 30px;
+
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
             }
 
 
@@ -19,12 +42,14 @@
             #mobile-switch-box {
                 &:checked {
                     ~.menu {
-                        display: block;
+                        // display: block;
+                        top: 90px;
+                        opacity: 1;
                     }
 
                     ~.menu-switch {
                         >span {
-                            background: #red;
+                            background: #ee0a0a;
 
                             &:first-child {
                                 position: relative;

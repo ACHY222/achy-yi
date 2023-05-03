@@ -29,7 +29,7 @@ html {
   width: 100%;
 }
 .header .header-content {
-  background: #red;
+  background: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -261,17 +261,41 @@ html {
 }
 
 @media screen and (max-width: 800px) {
+  .header .header-content {
+    position: relative;
+  }
   .header .header-content .menu {
-    display: none;
+    position: absolute;
+    background: #fff;
+    top: -500px;
+    width: 100%;
+    left: 0;
+    opacity: 0;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    transition: 0.3s;
+  }
+  .header .header-content .menu ul {
+    flex-direction: column;
+  }
+  .header .header-content .menu ul li {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+  .header .header-content .menu ul li:last-child {
+    margin-bottom: 0;
   }
   .header .header-content .mobile-switch {
     display: flex;
   }
   .header .header-content #mobile-switch-box:checked ~ .menu {
-    display: block;
+    top: 90px;
+    opacity: 1;
   }
   .header .header-content #mobile-switch-box:checked ~ .menu-switch > span {
-    background: #red;
+    background: #ee0a0a;
   }
   .header .header-content #mobile-switch-box:checked ~ .menu-switch > span:first-child {
     position: relative;
