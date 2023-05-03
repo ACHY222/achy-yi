@@ -65,7 +65,7 @@ html {
         }
 
         .mobile-switch {
-            height: 100%;
+            display: none;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -298,3 +298,5 @@ html {
         }
     }
 }
+
+@import 'rwd_layout_mobile';
