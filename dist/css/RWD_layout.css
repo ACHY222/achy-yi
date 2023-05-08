@@ -272,7 +272,6 @@ html {
 .flow .item .text {
   position: absolute;
   left: calc(50% + 50px);
-  background: rgb(0, 60, 255);
   padding: 20px;
   border-radius: 6px;
 }
@@ -283,6 +282,13 @@ html {
   left: unset;
   right: calc(50% + 50px);
   text-align: right;
+  background: rgb(0, 60, 255);
+}
+.flow .item:nth-child(odd) .text {
+  left: unset;
+  right: calc(50% + 50px);
+  text-align: right;
+  background: rgb(12, 199, 84);
 }
 
 @media screen and (max-width: 800px) {
@@ -365,5 +371,26 @@ html {
     margin-left: 30px;
     border-left-width: 0;
     border-bottom: 3px dashed #fff;
+  }
+  .flow .item {
+    justify-content: flex-start;
+    padding-left: 5px;
+    margin-bottom: 20px;
+  }
+  .flow .item::before {
+    left: 18px;
+  }
+  .flow .item .text {
+    left: 50px;
+  }
+  .flow .item:nth-child(even) .text {
+    left: 50px;
+    right: unset;
+    text-align: left;
+  }
+  .flow .item:nth-child(odd) .text {
+    left: 50px;
+    right: unset;
+    text-align: left;
   }
 }/*# sourceMappingURL=RWD_layout.css.map */

@@ -317,7 +317,6 @@ html {
         .text {
             position: absolute;
             left: calc(50% + 50px);
-            background: rgb(0, 60, 255);
             padding: 20px;
             border-radius: 6px;
 
@@ -331,6 +330,16 @@ html {
                 left: unset;
                 right: calc(50% + 50px);
                 text-align: right;
+                background: rgb(0, 60, 255);
+            }
+        }
+
+        &:nth-child(odd) {
+            .text {
+                left: unset;
+                right: calc(50% + 50px);
+                text-align: right;
+                background: rgb(12, 199, 84);
             }
         }
     }

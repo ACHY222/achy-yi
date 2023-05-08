@@ -107,4 +107,37 @@
             }
         }
     }
+
+
+    .flow {
+        .item {
+            justify-content: flex-start;
+            padding-left: 5px;
+            margin-bottom: 20px;
+
+            &::before {
+                left: 18px;
+            }
+
+            .text {
+                left: 50px;
+            }
+
+            &:nth-child(even) {
+                .text {
+                    left: 50px;
+                    right: unset;
+                    text-align: left;
+                }
+            }
+
+            &:nth-child(odd) {
+                .text {
+                    left: 50px;
+                    right: unset;
+                    text-align: left;
+                }
+            }
+        }
+    }
 }
