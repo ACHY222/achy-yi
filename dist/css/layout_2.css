@@ -157,32 +157,29 @@ a {
 
 .table tbody tr {
   background: #dedede;
+  /* 單數 */
+  /* 雙數 */
 }
-
-/* 單數 */
-.table tbody tr:nth-child(odd) {
+.table tbody tr :nth-child(odd) {
   background: blue;
 }
-
-/* 雙數 */
-.table tbody tr:nth-child(even) {
+.table tbody tr .table tbody tr:nth-child(odd) {
+  background: blue;
+}
+.table tbody tr .table tbody tr:nth-child(even) {
   background: red;
 }
-
-.menu-item li {
+.table tbody tr .menu-item li {
   margin-right: 20px;
   background: blue;
 }
-
-.menu-item li:last-child {
+.table tbody tr .menu-item li:last-child {
   margin-right: 0;
 }
-
-.menu-item li:nth-child(7) {
+.table tbody tr .menu-item li:nth-child(7) {
   color: red;
 }
-
-.block::after {
+.table tbody tr .block::after {
   content: "";
   width: 20px;
   height: 20px;
@@ -191,18 +188,9 @@ a {
   position: absolute;
   right: 0;
 }
-
-.group1 .switch + .item {
+.table tbody tr .group1 .switch + .item {
   color: red;
 }
-
-.group2 .switch + .item {
+.table tbody tr .group2 .switch + .item {
   color: red;
-}
-
-/* .group1 .switch ~ .item {
-    color: red;
-}
-.group2 .switch ~ .item {
-    color: red;
-} *//*# sourceMappingURL=layout_2.css.map */
+}/*# sourceMappingURL=layout_2.css.map */

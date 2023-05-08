@@ -64,12 +64,12 @@ html {
   font-family: "Courier New", Courier, monospace;
 }
 .header .header-content .mobile-switch {
-  display: none;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  display: none;
 }
 .header .header-content .mobile-switch > span {
   width: 30px;
@@ -144,12 +144,37 @@ html {
 }
 .join-form .join-form-wrap .join-form-content .text-content {
   line-height: 30px;
+  height: 75%;
   text-align: justify;
+  overflow: hidden;
+  position: relative;
 }
-.join-form .join-form-wrap .join-form-content .form-control {
+.join-form .join-form-wrap .join-form-content .text-content .text-more {
+  position: absolute;
+  width: 100%;
+  height: 40px;
+  background: rgb(255, 255, 255);
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 0;
+  bottom: 0;
+  cursor: pointer;
+}
+.join-form .join-form-wrap .join-form-content #text-more-box {
+  display: none;
+}
+.join-form .join-form-wrap .join-form-content #text-more-box:checked ~ .text-content {
+  overflow: auto;
+}
+.join-form .join-form-wrap .join-form-content #text-more-box:checked ~ .text-content .text-more {
+  display: none;
+}
+.join-form .join-form-wrap .form-control {
   margin-bottom: 15px;
 }
-.join-form .join-form-wrap .join-form-content .form-control input {
+.join-form .join-form-wrap .form-control input {
   width: 100%;
   height: 40px;
   border: 0;
@@ -159,7 +184,7 @@ html {
   font-size: 20px;
   border-radius: 4px;
 }
-.join-form .join-form-wrap .join-form-content .join-form-submit {
+.join-form .join-form-wrap .join-form-submit {
   text-align: right;
 }
 
@@ -294,20 +319,51 @@ html {
     top: 90px;
     opacity: 1;
   }
-  .header .header-content #mobile-switch-box:checked ~ .menu-switch > span {
-    background: #ee0a0a;
+  .header .header-content #mobile-switch-box:checked ~ .mobile-switch > span {
+    background: rgb(255, 57, 42);
   }
-  .header .header-content #mobile-switch-box:checked ~ .menu-switch > span:first-child {
+  .header .header-content #mobile-switch-box:checked ~ .mobile-switch > span:first-child {
     position: relative;
     transform: rotate(45deg);
     top: 5px;
   }
-  .header .header-content #mobile-switch-box:checked ~ .menu-switch > span :nth-child(2) {
+  .header .header-content #mobile-switch-box:checked ~ .mobile-switch > span:nth-child(2) {
     display: none;
   }
-  .header .header-content #mobile-switch-box:checked ~ .menu-switch > span:last-child {
+  .header .header-content #mobile-switch-box:checked ~ .mobile-switch > span:last-child {
     position: relative;
     transform: rotate(-45deg);
     top: -5px;
+  }
+  .join-form {
+    height: unset;
+    min-height: 100vh;
+  }
+  .join-form .join-form-wrap {
+    height: unset;
+    align-items: flex-start;
+    padding-top: 120px;
+  }
+  .join-form .join-form-wrap .join-form-content {
+    flex-direction: column;
+    background: transparent;
+    height: unset;
+    padding-bottom: 60px;
+  }
+  .join-form .join-form-wrap .join-form-content > div {
+    width: 100%;
+    height: 300px;
+    background: rgb(5, 47, 138);
+  }
+  .join-form .join-form-wrap .join-form-content .join-form-left-side::before {
+    right: unset;
+    top: unset;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: calc(100% - 60px);
+    margin-left: 30px;
+    border-left-width: 0;
+    border-bottom: 3px dashed #fff;
   }
 }/*# sourceMappingURL=RWD_layout.css.map */

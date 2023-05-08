@@ -69,12 +69,12 @@ html {
         }
 
         .mobile-switch {
-            display: none;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             cursor: pointer;
+            display: none;
 
             >span {
                 width: 30px;
@@ -165,30 +165,63 @@ html {
 
             .text-content {
                 line-height: 30px;
+                height: 75%;
                 text-align: justify;
-            }
+                overflow: hidden;
+                position: relative;
 
-            .form-control {
-                margin-bottom: 15px;
-
-                input {
+                .text-more {
+                    position: absolute;
                     width: 100%;
                     height: 40px;
-                    border: 0;
-                    outline: none;
-                    padding-left: 10px;
-                    padding-right: 10px;
-                    font-size: 20px;
-                    border-radius: 4px;
+                    background: rgb(255, 255, 255);
+                    color: #000;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    left: 0;
+                    bottom: 0;
+                    cursor: pointer;
                 }
             }
 
-            .join-form-submit {
-                text-align: right;
+            #text-more-box {
+                display: none;
+
+                &:checked {
+                    ~.text-content {
+                        overflow: auto;
+
+
+                        .text-more {
+                            display: none;
+                        }
+                    }
+                }
             }
+        }
+
+        .form-control {
+            margin-bottom: 15px;
+
+            input {
+                width: 100%;
+                height: 40px;
+                border: 0;
+                outline: none;
+                padding-left: 10px;
+                padding-right: 10px;
+                font-size: 20px;
+                border-radius: 4px;
+            }
+        }
+
+        .join-form-submit {
+            text-align: right;
         }
     }
 }
+
 
 
 .button {
