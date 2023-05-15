@@ -113,16 +113,51 @@ const addNum = (originNum, addNum) => {
     // 判斷是否是真的數字
     let total = originNum + addNum;
     // 判斷是否超過100分
-    console.log(`In function: ${total}`);
+    // console.log(`In function: ${total}`);
     return total;
 }
 
-let students = [40, 50, 80, 77];
-let add = 30;
-students.forEach((s, index) => {
-    students[index] = addNum(s, add);
-}
+// let students = [40, 50, 80, 77];
+// let add = 30;
+// students.forEach((s, index) => {
+//     students[index] = addNum(s, add);
+// }
+// );
+
+let students = [];
+students.push(
+    {
+        name: 'Tony',
+        num: 89
+    }
 );
 
+students.push(
+    {
+        name: 'Peter',
+        num: 80
+    }
+);
+
+students.push(
+    {
+        name: 'Ben',
+        num: 36
+    }
+);
+
+students.push(
+    {
+        name: 'May',
+        num: 55
+    }
+);
+
+let add = 10;
+students.forEach((student, index) => {
+    console.log(`Students${student.name}:${student.num}`);
+    student, num = addNum(student.num, add);
+    students[index] = student;
+})
 
 console.table(students);
