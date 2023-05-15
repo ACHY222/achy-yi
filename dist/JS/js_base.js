@@ -65,3 +65,23 @@ console.log(index);
 
 students.splice(index, 1);
 console.log(students);
+
+let nums = [40, 50, 80, 75];
+
+console.log('調整前');
+nums.forEach((snum, index) => {
+    console.log(`第 ${index + 1} 位學生: ${snum}`);
+    nums[index] = snum + 20;
+})
+
+console.log('調整後');
+nums.forEach((snum, index) => {
+    console.log(`第 ${index + 1} 位學生: ${snum}`);
+});
+
+let students100 = [];
+for (let sindex = 0; sindex < 100; sindex++) {
+    students100[sindex] = Math.ceil(Math.random() * 100);
+}
+
+console.table(students100);
