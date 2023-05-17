@@ -18,17 +18,30 @@ const genTable = () => {
         return;
     }
 
-    console.log(n1, n2);
+    let thead = [];
+    thead.push('');
 
     let result = [];
     for (let i = 1; i <= n1.value; i++) {
+        thead.push(i);
         for (let j = 1; j <= n2.value; j++) {
             result.push(`${i} * ${j} = ${i * j}`);
         }
 
     }
-    console.log(result);
+
+    let table = document.querySelector('#table');
+    let theadTr = table.querySelector('thead tr');
+
+    theadTr.innerHTML = '';
+    thead.forEach((n, nindex) => {
+        thead.innerHTML += '<th>${n}</th>'
+    });
+
+
+    console.log(thead);
 }
+
 
 let make = document.querySelector('#make');
 
