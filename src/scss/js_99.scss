@@ -1,0 +1,19 @@
+@import 'reset';
+
+.container {
+    max-width: 800px;
+    height: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    margin: auto;
+}
+
+#main {
+    margin-top: 20px;
+    color: red;
+}
+
+#menu li {
+    color: rgb(40, 38, 182);
+}
