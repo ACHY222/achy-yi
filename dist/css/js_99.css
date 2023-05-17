@@ -15,11 +15,47 @@
   margin: auto;
 }
 
-#main {
-  margin-top: 20px;
-  color: red;
+.input-block {
+  display: flex;
+  margin: 20px auto;
+  align-items: center;
+}
+.input-block > div {
+  flex: 1;
+}
+.input-block input {
+  padding: 5px;
+  border: 0;
+  background: #dedede;
+  outline: 0;
+  font-size: 14px;
+}
+.input-block button {
+  padding: 5px 12px;
+  border: 0;
+  background: #0a3185;
+  color: #fff;
+  cursor: pointer;
+}
+.input-block button:hover {
+  background: #36aee6;
 }
 
-#menu li {
-  color: rgb(40, 38, 182);
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.table th,
+.table td {
+  border: 1px solid #7e7e7e;
+  padding: 5px;
+  text-align: center;
+}
+.table th {
+  background: #0a3185;
+  color: #fff;
+}
+.table tbody tr:nth-child(even) td {
+  background: #dedede;
 }/*# sourceMappingURL=js_99.css.map */
