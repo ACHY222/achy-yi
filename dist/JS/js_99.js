@@ -18,11 +18,18 @@ const genTable = () => {
         return;
     }
 
+    console.log(n1, n2);
+
     let result = [];
     for (let i = 1; i <= n1.value; i++) {
-        for (let j = 1; j <= n2.value; j++); {
-            result.push('${i} *${j}=${i*j}');
+        for (let j = 1; j <= n2.value; j++) {
+            result.push(`${i} * ${j} = ${i * j}`);
         }
+
     }
     console.log(result);
 }
+
+let make = document.querySelector('#make');
+
+make.addEventListener('click', genTable);
