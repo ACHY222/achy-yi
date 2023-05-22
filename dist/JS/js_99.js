@@ -21,13 +21,14 @@ const genTable = () => {
     let thead = [];
     thead.push('');
 
-    let result = [];
+
+    let result = {};
     for (let i = 1; i <= n1.value; i++) {
         thead.push(i);
+        result[i] = [];
         for (let j = 1; j <= n2.value; j++) {
-            result.push(`${i} * ${j} = ${i * j}`);
+            result[i].push(i * j);
         }
-
     }
 
     let table = document.querySelector('#table');
@@ -39,7 +40,21 @@ const genTable = () => {
     });
 
 
-    console.log(thead);
+    let tbody = table.querySelector('tbody');
+    let tbodyTr = '';
+    tbody.innerHTML = '';
+
+    for (let row in result) {
+        tbodyTr = `<tr><td>${row}</td>`;
+        let colunms = result[row];
+        colunms.forEach(value => {
+            tbodyTr += `<td>${value}</td>`
+        });
+
+
+        tbodyTr += '</tr>';
+        tbody.innerHTML += tbodyTr;
+    }
 }
 
 
