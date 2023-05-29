@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOW LI</title>
+    <style>
+        #menu li {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <ul id="menu">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+    <button id="append">Append</button>
+</body>
+
+<script>
+    let menu = document.querySelector('#menu');
+
+    menu.addEventListener('click', (e){
+        let target = e.target;
+        console.log(target.innerHTML);
+    });
+
+
+    let append = document.querySelector('#append');
+    append.addEventListener('click', () => {
+        let menu = document.querySelector('#menu');
+
+        let li = document.createElement('li');
+        li.innerHTML = '5';
+        menu.appendChild(li);
+
+        let li2 = document.createElement('li');
+        li.innerHTML = '6';
+        menu.appendChild(li2);
+
+        // let items = document.querySelectorAll('#menu li');
+
+        // items.forEach(item => {
+        //     item.addEventListener('click', () => {
+        //         console.log(item.innerHTML);
+        //     });
+        // });
+    })
+
+     // let items = document.querySelectorAll('#menu li');
+
+    // items.forEach(item => {
+    //     item.addEventListener('click', () => {
+    //         console.log(item.innerHTML);
+    //     });
+    // });
+</script>
+
+</html>
