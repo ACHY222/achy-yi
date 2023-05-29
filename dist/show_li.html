@@ -53,14 +53,37 @@
         <li>4</li>
     </ul>
     <button id="append">Append</button>
+    <a href="'#about" id="link">about</a>
+
+    <div class="one-page">
+        One
+    </div>
+
+    <div class="one-page">
+        About
+    </div>
+
+    <div class="about">
+        <h1>About</h1>
+    </div>
 </body>
 
 <script>
+    let link = document.querySelector('#link');
+
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        let about = document.querySelector('.about');
+        about.classList.add('active');
+    })
+
     let menu = document.querySelector('#menu');
 
-    menu.addEventListener('click', (e){
+    menu.addEventListener('click', (e) => {
         let target = e.target;
-        console.log(target.innerHTML);
+        if (target.tagName == 'Li') {
+            console.log(target.innerHTML);
+        }
     });
 
 
