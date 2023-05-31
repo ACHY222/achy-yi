@@ -1,6 +1,6 @@
 const init = () => {
-    let addBtn = document.querySelector('add-btn');
-    let item-name =document.querySelector('#item-name');
+    let addBtn = document.querySelector('#add-btn');
+    let itemName = document.querySelector('#item-name');
 
     addBtn.addEventListener('click', () => {
         let value = itemName.value;
