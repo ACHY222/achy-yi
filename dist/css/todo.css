@@ -14,17 +14,22 @@
   margin: auto;
 }
 
+.slogan {
+  background: #2c5fbd;
+  color: #fff;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
 .todo-input {
   display: flex;
   align-items: center;
   margin-top: 15px;
 }
-
-.todo-input>label {
+.todo-input > label {
   margin-right: 15px;
 }
-
-.todo-input>input {
+.todo-input > input {
   flex: 1;
   height: 36px;
   outline: 0;
@@ -33,17 +38,28 @@
   border-bottom: 1px solid #000;
   font-size: 30px;
 }
-
-.todo-input>button {
+.todo-input > button {
   padding: 10px 20px;
   border: 0;
   background: #2252ac;
   color: #fff;
   margin-left: 15px;
+  font-size: 20px;
+  font-weight: 700;
 }
 
-.pending-item input[type=checkbox]:checked~label {
+.pending-item input[type=checkbox]:checked ~ label {
   text-decoration: line-through;
 }
 
-/*# sourceMappingURL=todo.css.map */
+.todo-status {
+  display: flex;
+  margin-top: wrap;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.todo-status > div {
+  width: calc(50% - 8px);
+  border: 1px solid #dedede;
+  padding: 15px;
+}/*# sourceMappingURL=todo.css.map */
