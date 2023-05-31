@@ -1,0 +1,17 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 800px;
+  height: 100%;
+  position: relative;
+  padding: 0 15px;
+  margin: auto;
+}
+
+/*# sourceMappingURL=todo.css.map */
