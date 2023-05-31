@@ -46,6 +46,10 @@
   margin-left: 15px;
   font-size: 20px;
   font-weight: 700;
+  cursor: pointer;
+}
+.todo-input > button:hover {
+  background: #519e1d;
 }
 
 .pending-item input[type=checkbox]:checked ~ label {
