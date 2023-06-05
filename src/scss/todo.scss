@@ -67,6 +67,20 @@
             background: #7c2e10;
         }
     }
+
+    .done-item {
+        >ul li {
+            padding: 10px;
+            background: #31dfab;
+            color: #fff;
+            margin-bottom: 10px;
+            cursor: pointer;
+
+            &:hover {
+                background: #1c9e77;
+            }
+        }
+    }
 }
 
 .todo-status {
