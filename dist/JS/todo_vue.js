@@ -1,3 +1,13 @@
+const database = {
+    set(key, value) {
+        localStorage.setItem(key, value);
+    },
+    get(key) {
+        return localStorage.getItem(key);
+    }
+}
+
+
 let vm = Vue.createApp({
     data() {
         return {
@@ -30,7 +40,7 @@ let vm = Vue.createApp({
             this.done.push(value);
             this.pending.splice(index, 1);
         },
-        topending(index) {
+        toPending(index) {
             let value = this.done[index];
             this.pending.push(value);
             this.done.splice(index, 1);
