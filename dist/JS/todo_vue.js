@@ -1,4 +1,4 @@
-Vue.createApp({
+let vm = Vue.createApp({
     data() {
         return {
             pending: [],
@@ -31,7 +31,9 @@ Vue.createApp({
             this.pending.splice(index, 1);
         },
         topending(index) {
-
+            let value = this.done[index];
+            this.pending.push(value);
+            this.done.splice(index, 1);
         }
     }
 }).mount('#app');
