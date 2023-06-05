@@ -21,7 +21,8 @@ Vue.createApp({
                 })
                 return;
             }
-            console.log(value);
+            this.pending.push(value);
+            console.table(this.pending);
         }
     }
 }).mount('#app');
