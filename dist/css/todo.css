@@ -45,7 +45,7 @@
 .todo-input > button {
   padding: 10px 20px;
   border: 0;
-  background: #2252ac;
+  background: #22ac2e;
   color: #fff;
   margin-left: 15px;
   font-size: 20px;
@@ -53,36 +53,37 @@
   cursor: pointer;
 }
 .todo-input > button:hover {
-  background: #519e1d;
+  background: #187e21;
 }
 
 .pending-item input[type=checkbox]:checked ~ label {
   text-decoration: line-through;
 }
-.pending-item .pending-item > ul li {
+.pending-item > ul li {
   padding: 10px;
   background: #ff6123;
   color: #fff;
   margin-bottom: 10px;
   cursor: pointer;
 }
-.pending-item .pending-item > ul li:hover {
-  background: #7c2e10;
+.pending-item > ul li:hover {
+  background: #b13d10;
 }
-.pending-item .done-item > ul li {
+
+.done-item > ul li {
   padding: 10px;
   background: #31dfab;
   color: #fff;
   margin-bottom: 10px;
   cursor: pointer;
 }
-.pending-item .done-item > ul li:hover {
+.done-item > ul li:hover {
   background: #1c9e77;
 }
 
 .todo-status {
   display: flex;
-  margin-top: wrap;
+  margin-top: 15px;
   flex-wrap: wrap;
   gap: 15px;
 }

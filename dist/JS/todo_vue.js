@@ -1,11 +1,20 @@
 const database = {
     set(key, value) {
+        value = JSON.stringify(value)
         localStorage.setItem(key, value);
     },
     get(key) {
-        return localStorage.getItem(key);
+        let value = localStorage.getItem(key);
+        if (value) {
+            value = JSON.perse(value);
+        }
+        return value;
+    },
+    remove(key) {
+        localStorage.removeItem(key);
     }
 }
+
 
 
 let vm = Vue.createApp({
@@ -34,6 +43,7 @@ let vm = Vue.createApp({
             this.pending.push(value);
             this.itemValue = '';
             this.$refs.itemValue.focus();
+            database.set('todo-pending,this.pending');
         },
         toDone(index) {
             let value = this.pending[index];
