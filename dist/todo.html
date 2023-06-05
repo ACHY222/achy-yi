@@ -24,6 +24,7 @@
                     <ul id="pending-item">
                         <li v-for="(item, itemIndex) in pending" @click="toDone(itemIndex)">
                             <label for="">{{ item }}</label>
+                            <i @click="doRemove(itemIndex)">&times;</i>
                         </li>
                     </ul>
                 </div>

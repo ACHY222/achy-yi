@@ -6,7 +6,7 @@ const database = {
     get(key, def) {
         let value = localStorage.getItem(key);
         if (value) {
-            value = JSON.perse(value);
+            value = JSON.parse(value);
         }
         return def;
     },
@@ -43,17 +43,26 @@ let vm = Vue.createApp({
             this.pending.push(value);
             this.itemValue = '';
             this.$refs.itemValue.focus();
-            database.set('todo-pending,this.pending');
+            this.update();
+        },
+        doRemove(index) {
+            console.log(index);
         },
         toDone(index) {
             let value = this.pending[index];
             this.done.push(value);
             this.pending.splice(index, 1);
+            this.update();
         },
         toPending(index) {
             let value = this.done[index];
             this.pending.push(value);
             this.done.splice(index, 1);
+            this.update();
+        },
+        update() {
+            database.set('todo-pending', this.pending);
+            database.set('todo-done', this.done);
         }
     },
     mounted() {
