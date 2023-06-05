@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+[v-cloak] {
+  display: none;
+}
+
 .container {
   max-width: 800px;
   height: 100%;

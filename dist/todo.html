@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <div id="app">
+    <div id="app" v-cloak>
         <div class="container" style="margin-top:15px;">
             <h1 class="slogan">TODO LIST</h1>
             <div class="todo-input">
@@ -30,7 +30,7 @@
                 <div class="done-item">
                     <h3 class="slogan">完成清單</h3>
                     <ul>
-                        <li v-for="(item,itemIndex) in pending">
+                        <li v-for="(item,itemIndex) in done">
                             <label for="">{{item}}</label>
                         </li>
                     </ul>

@@ -22,7 +22,15 @@ Vue.createApp({
                 return;
             }
             this.pending.push(value);
-            console.table(this.pending);
+            this.itemValue = '';
+            this.$refs.itemValue.focus();
+        },
+        toDone(index) {
+            let value = this.pending[index];
+
+            console.log(index, value);
+            // 把代辦項目搬移到已完成資料內
+            // 刪除目前代辦項目
         }
     }
 }).mount('#app');
