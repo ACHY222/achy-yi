@@ -14,8 +14,8 @@
         <div class="container" style="margin-top:15px;">
             <h1 class="slogan">TODO LIST</h1>
             <div class="cloud-func">
-                <button class="cloud-save">上傳雲端</button>
-                <button class="cloud-load">載入雲端</button>
+                <button class="cloud-save" @click="doSaveCloud">上傳雲端</button>
+                <button class="cloud-load" @click="doLoadCloud">載入雲端</button>
             </div>
             <div class="todo-input">
                 <label for="item-name">項目名稱</label>

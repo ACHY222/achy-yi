@@ -65,6 +65,30 @@ let vm = Vue.createApp({
             database.set('todo-done', this.done);
         }
     },
+    DoSaveCloud() {
+        Swal.fire({
+            title: '儲存到雲端',
+            text: '輸入UID',
+            input: 'text',
+            showCancelButton: 'true',
+            confirmButtonText: '儲存',
+            cancelButtonText: '先不要',
+
+        }).then(response => {
+            if (response.value) {
+                let params = {
+                    action: 'todo',
+                    uid: response.value,
+                    data: {
+                        pending: this.pending,
+                        done: this.done
+                    }
+                }
+
+                console.log(params);
+            }
+        });
+    },
     mounted() {
         this.pending = database.get('todo-pending', [])
     }
