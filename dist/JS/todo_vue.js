@@ -132,10 +132,18 @@ let vm = Vue.createApp({
 
             if (response.value) {
                 let api = 'https://book.niceinfos.com/frontend/api/';
-                fetch(`${api}?action=todo&uid=${response.uid}`).then(response => {
+                fetch(`${api}?action=todo&uid=${response.value}`).then(response => {
                     return response.text();
                 }).then(text => {
-                    console.log(text);
+                    let response = JSON.parse(text);
+                    if (response.data.pending) {
+                        this.pending = response.data.pending;
+                    }
+                    if (response.data.done) {
+                        this.done = response.data.done;
+                    }
+
+                    this.update();
                 })
             }
         }
