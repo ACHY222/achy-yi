@@ -8,8 +8,22 @@
 </head>
 
 <body>
-
+    <div id="uid">UID</div>
 </body>
 <script src="js/jquery-3.7.0.min.js"></script>
+<script>
+    let $ = 'Hello';
+
+    // 使用 closure 避免 $ 被複寫
+    (($) => {
+        // innerHTML
+        let uid = $('#uid').html();
+        console.log(uid);
+    })(jQuery)
+
+    console.log($);
+
+
+</script>
 
 </html>
