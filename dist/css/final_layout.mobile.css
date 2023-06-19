@@ -1,0 +1,38 @@
+@media screen and (max-width: 800px) {
+  .header .header-logo {
+    flex: 1;
+  }
+  .header .header-mobile-switch {
+    display: flex;
+  }
+  .header .header-menu ul {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+    background: #dedede;
+    display: none;
+  }
+  .header .header-lang {
+    display: none;
+  }
+  #mobile-checkbox ~ .header-mobile-switch > span {
+    background: rgb(224, 48, 48);
+  }
+  #mobile-checkbox ~ .header-mobile-switch > span:first-child {
+    transform: rotate(45deg);
+    top: 9px;
+  }
+  #mobile-checkbox ~ .header-mobile-switch > span:nth-child(2) {
+    transition: none;
+    visibility: hidden;
+  }
+  #mobile-checkbox ~ .header-mobile-switch > span:last-child {
+    transform: rotate(-45deg);
+    top: -9px;
+  }
+}/*# sourceMappingURL=final_layout.mobile.css.map */
