@@ -55,7 +55,7 @@
                 <ul class="slider-item">
                     <template v-for="(item,itemIndex) in items">
                         <li>
-                            <div class="slider-bg"></div>
+                            <div class="slider-bg" :style="{'background-image': `url(${item.bg})`}"></div>
                             <div class="slider-content">
                                 <div class="slider-title">{{ items.title}}</div>
                                 <div class="slider-subtitle">{{ items.subtitle}}</div>
@@ -66,7 +66,8 @@
                 </ul>
                 <div class="slider-menu">
                     <template v-for="(item,itemIndex) in items">
-                        <div>{{itemIndex}}</div>
+                        <div :class="{active: currentIndex == itemIndex}" @click="setIndex(itemIndex)">{{itemIndex}}
+                        </div>
 
                     </template>
                 </div>

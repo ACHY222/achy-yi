@@ -6,7 +6,14 @@ Vue.crreateApp({
                 { title: '第二張', subtitle: '第二子標題', bg: '/images/banner.jpeg' },
                 { title: '第三張', subtitle: '第三子標題', bg: '/images/process.jpeg' },
 
-            ]
+            ],
+            currentIndex: 0,
+        }
+    },
+    methods: {
+        setIndex(index) {
+            this.currentIndex = index;
         }
     }
+
 }).mount('#app-slider');
