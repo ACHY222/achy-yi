@@ -1,0 +1,89 @@
+.slider-block {
+  height: 100vh;
+  background: #000;
+  color: #fff;
+}
+.slider-block .slider {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slider-block .slider .slider-menu {
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  z-index: 3;
+}
+.slider-block .slider .slider-menu > div {
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  border-radius: 100px;
+  position: relative;
+  text-indent: -999em;
+  cursor: pointer;
+}
+.slider-block .slider .slider-menu > div::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  border: 2px solid #fff;
+  border-radius: 100px;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+}
+.slider-block .slider .slider-menu > div:hover, .slider-block .slider .slider-menu > div.active {
+  background: red;
+}
+.slider-block .slider .slider-menu > div:hover::after, .slider-block .slider .slider-menu > div.active::after {
+  border-color: red;
+}
+.slider-block .slider .slider-item {
+  height: 100%;
+  width: 100%;
+}
+.slider-block .slider .slider-item li {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.slider-block .slider .slider-item li .slider-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/dog.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+.slider-block .slider .slider-item li .slider-bg::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.233);
+}
+.slider-block .slider .slider-item li .slider-title {
+  font-size: 4rem;
+}
+.slider-block .slider .slider-item li .slider-subtitle {
+  font-size: 2rem;
+}
+.slider-block .slider .slider-item li .slider-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  z-index: 2;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}/*# sourceMappingURL=slider.css.map */

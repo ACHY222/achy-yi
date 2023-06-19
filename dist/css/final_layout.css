@@ -6,6 +6,11 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  font-size: 16px;
+}
+
 .container {
   max-width: 1000px;
   padding: 0 15px;
@@ -20,12 +25,13 @@
 
 .header {
   height: 80px;
-  background: #dedede;
+  background: #fff;
   font-weight: 700;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 9;
 }
 .header .container {
   display: flex;
@@ -91,6 +97,54 @@
   font-size: 14px;
 }
 
+.slider-block {
+  height: 100vh;
+  background: #000;
+  color: #fff;
+}
+.slider-block .slider {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slider-block .slider .slider-menu {
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  z-index: 3;
+}
+.slider-block .slider .slider-menu > div {
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  border-radius: 100px;
+  position: relative;
+  text-indent: -999em;
+  cursor: pointer;
+}
+.slider-block .slider .slider-menu > div::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  border: 2px solid #fff;
+  border-radius: 100px;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+}
+.slider-block .slider .slider-menu > div:hover, .slider-block .slider .slider-menu > div.active {
+  background: red;
+}
+.slider-block .slider .slider-menu > div:hover::after, .slider-block .slider .slider-menu > div.active::after {
+  border-color: red;
+}
+
 .page {
   height: 100vh;
 }
@@ -111,7 +165,7 @@
     justify-content: center;
     align-items: center;
     padding-top: 15px;
-    background: #dedede;
+    background: #fff;
     display: none;
   }
   .header .header-lang {
